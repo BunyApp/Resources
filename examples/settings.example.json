@@ -1,0 +1,60 @@
+[
+    {
+    "type": "group", "title": "Toggles",
+    "footer": "The conditional text field only appears when the toggle above it is enabled.",
+    "items": [
+        {"type": "switch", "key": "toggle1", "title": "Basic Toggle", "default": true},
+        {"type": "switch", "key": "toggle2", "title": "Toggle with Subtitle", "subtitle": "Some helpful description text here", "default": false},
+        {"type": "switch", "key": "cond_enable", "title": "Enable Feature", "default": false},
+        {"type": "text", "key": "cond_url", "title": "Feature URL", "placeholder": "https://", "requires": "cond_enable", "default": ""}
+    ]
+    },
+    {
+    "type": "group", "title": "Text Input",
+    "items": [
+        {"type": "text", "key": "text_plain", "title": "Username", "placeholder": "Enter username", "default": ""},
+        {"type": "text", "key": "text_secure", "title": "Password", "placeholder": "Enter password", "secure": true, "default": ""}
+    ]
+    },
+    {
+    "type": "group", "title": "Numeric & Segment",
+    "items": [
+        {"type": "stepper", "key": "stepper1", "title": "Page Limit", "minimumValue": 1, "maximumValue": 50, "default": 10},
+        {"type": "segment", "key": "segment1", "title": "Image Quality", "options": ["Low", "Medium", "High"], "default": 1}
+    ]
+    },
+    {
+    "type": "group", "title": "Selection",
+    "items": [
+        {"type": "select", "key": "select1", "title": "Language", "values": ["en", "ja", "zh"], "titles": ["English", "Japanese", "Chinese"], "default": "en"},
+        {"type": "multi-select", "key": "multiselect1", "title": "Content Rating", "values": ["safe", "suggestive", "mature"], "titles": ["Safe", "Suggestive", "Mature"], "default": ["safe"]}
+    ]
+    },
+    {
+    "type": "group", "title": "Lists",
+    "items": [
+        {"type": "editable-list", "key": "list_inline", "title": "Blocked Groups (inline)", "inline": true, "placeholder": "UUID", "default": ["group-uuid-1", "group-uuid-2"]},
+        {"type": "editable-list", "key": "list_page", "title": "Allowed Sources", "placeholder": "Source name", "default": ["Source A"]}
+    ]
+    },
+    {
+    "type": "group", "title": "Login",
+    "items": [
+        {"type": "login", "key": "login_web", "title": "Log in via Web", "method": "web", "url": "https://example.com", "logoutTitle": "Logged In — Tap to Logout"},
+        {"type": "login", "key": "login_basic", "title": "Log in with Credentials", "method": "basic", "logoutTitle": "Logged In — Tap to Logout"},
+        {"type": "login", "key": "login_oauth", "title": "Log in with OAuth", "method": "oauth", "url": "https://example.com/oauth", "callbackScheme": "buny", "logoutTitle": "Logged In — Tap to Logout"}
+    ]
+    },
+    {
+    "type": "group", "title": "Page",
+    "items": [
+        {
+        "type": "page", "key": "page_adv", "title": "Advanced Settings",
+        "items": [
+            {"type": "switch", "key": "adv_expert", "title": "Expert Mode", "default": false},
+            {"type": "text", "key": "adv_url", "title": "Custom Endpoint", "placeholder": "https://", "default": ""}
+        ]
+        }
+    ]
+    }
+]
